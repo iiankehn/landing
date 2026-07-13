@@ -4,65 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iian Kehn</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN configured with media-query dark mode -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media'
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between antialiased selection:bg-slate-900/5 selection:text-slate-900 relative overflow-x-hidden">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-zinc-200 min-h-screen flex flex-col justify-between antialiased selection:bg-slate-900/5 selection:text-slate-900 dark:selection:bg-blue-500/10 dark:selection:text-blue-400 relative overflow-x-hidden transition-colors duration-300">
 
-    <!-- Subtle Background Pattern Geometric Grid -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a05_1px,transparent_1px),linear-gradient(to_bottom,#0f172a05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+    <!-- Subtle Background Pattern Geometric Grid (Adapts to Light/Dark) -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a05_1px,transparent_1px),linear-gradient(to_bottom,#0f172a05_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#38bdf803_1px,transparent_1px),linear-gradient(to_bottom,#38bdf803_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
-    <!-- Top Border Accent -->
-    <div class="h-1.5 w-full bg-gradient-to-r from-zinc-200 via-slate-400 to-zinc-200"></div>
+    <!-- Top Border Accent Line -->
+    <div class="h-1.5 w-full bg-gradient-to-r from-zinc-200 via-slate-400 to-zinc-200 dark:from-blue-950 dark:via-blue-500 dark:to-indigo-950"></div>
 
     <!-- Main Content Container -->
     <main class="flex-grow flex items-center justify-center px-6 py-12 relative z-10">
-        <div class="max-w-xl w-full bg-white/60 backdrop-blur-md border border-slate-200/80 p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-100/50">
+        <div class="max-w-xl w-full bg-white/60 dark:bg-zinc-900/40 backdrop-blur-md border border-slate-200/80 dark:border-zinc-800/50 p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-100/50 dark:shadow-none transition-all duration-300">
             
             <!-- Header Section -->
             <header class="mb-10">
-                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3">
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-zinc-50 mb-3">
                     Iian Kehn
                 </h1>
-                <h3 class="text-lg font-medium text-slate-500 tracking-wide uppercase text-xs">
+                <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-blue-400/90">
                     Amazon Regulated Waste Coordinator
                 </h3>
-                <div class="h-1 w-12 bg-slate-900 rounded-full mt-4"></div>
+                <div class="h-1 w-12 bg-slate-900 dark:bg-gradient-to-r dark:from-blue-500 dark:to-indigo-500 rounded-full mt-4"></div>
             </header>
 
             <!-- Social Links Section -->
             <section>
-                <p class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">Connect</p>
+                <p class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-zinc-500 mb-4">Connect</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     
                     <!-- Threads -->
-                    <a href="#" class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-slate-900 hover:shadow-sm transition-all duration-200 group">
-                        <span class="font-medium text-slate-700 group-hover:text-slate-900">Threads</span>
-                        <span class="text-slate-400 group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
+                    <a href="#" class="flex items-center justify-between p-3.5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800/80 rounded-xl hover:border-slate-900 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-950/20 transition-all duration-200 group">
+                        <span class="font-medium text-slate-700 dark:text-zinc-300 group-hover:text-slate-900 dark:group-hover:text-blue-400">Threads</span>
+                        <span class="text-slate-400 dark:text-zinc-600 group-hover:translate-x-1 dark:group-hover:text-blue-400 transition-transform duration-200">&rarr;</span>
                     </a>
 
                     <!-- X -->
-                    <a href="#" class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-slate-900 hover:shadow-sm transition-all duration-200 group">
-                        <span class="font-medium text-slate-700 group-hover:text-slate-900">X (Twitter)</span>
-                        <span class="text-slate-400 group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
+                    <a href="#" class="flex items-center justify-between p-3.5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800/80 rounded-xl hover:border-slate-900 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-950/20 transition-all duration-200 group">
+                        <span class="font-medium text-slate-700 dark:text-zinc-300 group-hover:text-slate-900 dark:group-hover:text-blue-400">X (Twitter)</span>
+                        <span class="text-slate-400 dark:text-zinc-600 group-hover:translate-x-1 dark:group-hover:text-blue-400 transition-transform duration-200">&rarr;</span>
                     </a>
 
                     <!-- Bluesky -->
-                    <a href="#" class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-slate-900 hover:shadow-sm transition-all duration-200 group">
-                        <span class="font-medium text-slate-700 group-hover:text-slate-900">Bluesky</span>
-                        <span class="text-slate-400 group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
+                    <a href="#" class="flex items-center justify-between p-3.5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800/80 rounded-xl hover:border-slate-900 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-950/20 transition-all duration-200 group">
+                        <span class="font-medium text-slate-700 dark:text-zinc-300 group-hover:text-slate-900 dark:group-hover:text-blue-400">Bluesky</span>
+                        <span class="text-slate-400 dark:text-zinc-600 group-hover:translate-x-1 dark:group-hover:text-blue-400 transition-transform duration-200">&rarr;</span>
                     </a>
 
                     <!-- TikTok -->
-                    <a href="#" class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-slate-900 hover:shadow-sm transition-all duration-200 group">
-                        <span class="font-medium text-slate-700 group-hover:text-slate-900">TikTok</span>
-                        <span class="text-slate-400 group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
+                    <a href="#" class="flex items-center justify-between p-3.5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800/80 rounded-xl hover:border-slate-900 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-950/20 transition-all duration-200 group">
+                        <span class="font-medium text-slate-700 dark:text-zinc-300 group-hover:text-slate-900 dark:group-hover:text-blue-400">TikTok</span>
+                        <span class="text-slate-400 dark:text-zinc-600 group-hover:translate-x-1 dark:group-hover:text-blue-400 transition-transform duration-200">&rarr;</span>
                     </a>
 
                     <!-- YouTube -->
-                    <a href="#" class="flex items-center justify-between p-3.5 bg-white border border-slate-200 rounded-xl hover:border-slate-900 hover:shadow-sm transition-all duration-200 group sm:col-span-2">
-                        <span class="font-medium text-slate-700 group-hover:text-slate-900">YouTube</span>
-                        <span class="text-slate-400 group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>
+                    <a href="#" class="flex items-center justify-between p-3.5 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800/80 rounded-xl hover:border-slate-900 dark:hover:border-blue-500 hover:shadow-sm dark:hover:shadow-blue-950/20 transition-all duration-200 group sm:col-span-2">
+                        <span class="font-medium text-slate-700 dark:text-zinc-300 group-hover:text-slate-900 dark:group-hover:text-blue-400">YouTube</span>
+                        <span class="text-slate-400 dark:text-zinc-600 group-hover:translate-x-1 dark:group-hover:text-blue-400 transition-transform duration-200">&rarr;</span>
                     </a>
 
                 </div>
@@ -71,7 +76,7 @@
     </main>
 
     <!-- Simple Minimal Footer -->
-    <footer class="w-full text-center py-6 text-xs text-slate-400 tracking-wide z-10">
+    <footer class="w-full text-center py-6 text-xs text-slate-400 dark:text-zinc-600 tracking-wide z-10">
         <p>&copy; 2026 Iian Kehn. All rights reserved.</p>
     </footer>
 
