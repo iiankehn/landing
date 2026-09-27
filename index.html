@@ -34,7 +34,8 @@
     .card-top,.card-footer { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; }
     .status { display:inline-flex; align-items:center; gap:8px; color:#d9dcf0; }
     .status::before { content:""; width:7px; height:7px; border-radius:50%; background:#48e6b0; box-shadow:0 0 14px #48e6b0; }
-    .mark { display:grid; place-items:center; width:44px; height:44px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.055); font-size:1.1rem; font-weight:900; }
+    .mark { display:grid; place-items:center; width:54px; height:54px; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.055); font-size:1.1rem; font-weight:900; }
+    .mark img { width:100%; height:100%; object-fit:cover; display:block; }
     .card-copy { position:relative; z-index:1; margin:auto 0 42px; }
     h2 { margin:0 0 16px; font-size:clamp(2.8rem,6vw,5rem); line-height:.98; letter-spacing:-.06em; }
     .card p { max-width:430px; margin:0; color:#c0c4d3; line-height:1.65; }
@@ -61,7 +62,7 @@
       </header>
       <section class="projects" aria-label="Featured projects">
         <a class="card acute" href="https://acute.iiankehn.com/" aria-label="Visit Acute Web">
-          <div class="card-top"><span class="status">Active development</span><span class="mark" aria-hidden="true">A</span></div>
+          <div class="card-top"><span class="status">Active development</span><span class="mark"><img src="https://raw.githubusercontent.com/iiankehn/acute-web-ios/main/AcuteWeb/Assets.xcassets/AppIcon.appiconset/AcuteWebIcon-Clear.png" alt="Acute Web clear icon"></span></div>
           <div class="card-copy"><h2>Acute<br>Web</h2><p>A privacy-focused Android browser built on Gecko, designed for a calmer, more capable mobile web.</p></div>
           <div class="card-footer"><span>Explore Acute Web</span><span class="arrow" aria-hidden="true">↗</span></div>
         </a>
