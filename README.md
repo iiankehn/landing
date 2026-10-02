@@ -1,27 +1,28 @@
-# Iian Kehn — personal site
+# Iian Kehn
 
-Flat, responsive personal website hosted on GitHub Pages at https://www.iiankehn.com/.
+Personal website at https://www.iiankehn.com/. Plain HTML, CSS, and JavaScript. No package installation or build step.
 
 ## Pages
 
-- `index.html`: profile, Acute Web, CORE, Slate R1, Slate R2, and social profiles.
-- `videos.html`: official TikTok creator profile embed and YouTube link.
-- `about.html`: introduction and project overview.
+- Home: personal introduction and links to the other pages.
+- Projects: Acute Web, CORE, Slate R1, and Slate R2.
+- Videos: presentation gallery with cards linking to individual local watch pages.
+- About: biography, Amazon role, personal interests, and circular social icon buttons.
 
-## Edit and preview
+The visual system uses white and grey surfaces, muted blue accents, subtle depth, and small circular portraits. Navigation, typography, layouts, keyboard focus, and reduced motion support scale for phones and larger screens.
 
-Plain HTML, CSS, and a small video script. No build step, package installation, external fonts, or framework.
+## Preview and publish
 
-Run `python3 -m http.server 8000` from the repository and open http://localhost:8000.
+Run `python3 -m http.server 8000` from the repository. GitHub Pages publishes the root of `main`. Preserve `CNAME`.
 
-Shared styles are in `assets/site.css`. The supplied portrait is stored locally in `assets/iian-kehn.jpg`. Social profile links intentionally omit share tracking parameters. Update navigation and shared footer/social content across all three pages when making changes.
+## Add a TikTok video
 
-## Video integration
+The gallery reads `assets/videos.json`. Every entry has a real post URL, thumbnail, title, and matching page under `videos/`. Do not invent posts or use profile embeds as a gallery.
 
-The Videos page uses TikTok’s official creator profile embed, which shows a selection of recent public videos without a manually maintained list. The visitor selects **Load TikTok videos** before the third-party script is loaded. Public account eligibility, content availability, browser blocking, and TikTok service availability affect the embedded feed; direct TikTok and YouTube links remain available. No TikTok API key or account credential is stored.
+```sh
+python3 scripts/add-video.py 'https://www.tiktok.com/@iiankehn/video/POST_ID' --title 'Video title' --thumbnail 'assets/video-cover.jpg'
+```
 
-Documentation: https://developers.tiktok.com/docs/en/embed-creator-profiles
+Replace POST_ID with a verified numeric post ID. Use a verified title and thumbnail. The command creates the individual HTML page and updates the gallery. The watch page uses the official TikTok player and includes a direct link to the original post. TikTok availability and browser settings can affect playback; the original link remains accessible.
 
-## Publishing
-
-GitHub Pages serves the root of `main`; `CNAME` preserves `www.iiankehn.com`. Push changes to `main` and check the Pages deployment. Relative internal links support both the custom domain and repository-path hosting. Light/dark colors follow device preferences. Navigation works without JavaScript, and keyboard focus and reduced-motion preferences are supported.
+The gallery is currently empty because TikTok's public profile failed to return the video list during this redesign. Add verified post URLs to populate it. Public bio facts were verified on the creator's TikTok profile: Regulated Waste Coordinator (L3) at Amazon, tech creator, pet lover, proud husband.
