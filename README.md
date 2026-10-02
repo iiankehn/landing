@@ -26,3 +26,7 @@ python3 scripts/add-video.py 'https://www.tiktok.com/@iiankehn/video/POST_ID' --
 Replace POST_ID with a verified numeric post ID. Use a verified title and thumbnail. The command creates the individual HTML page and updates the gallery. The watch page uses the official TikTok player and includes a direct link to the original post. TikTok availability and browser settings can affect playback; the original link remains accessible.
 
 The gallery is currently empty because TikTok's public profile failed to return the video list during this redesign. Add verified post URLs to populate it. Public bio facts were verified on the creator's TikTok profile: Regulated Waste Coordinator (L3) at Amazon, tech creator, pet lover, proud husband.
+
+## Appearance
+
+The device theme is used by default and follows system changes while the site is open. Footer controls select System, Light, or Dark. Explicit selections are saved locally and shared across pages and tabs. Selecting System clears the override. Theme selection is applied before the stylesheet loads to avoid a light flash. With JavaScript disabled, CSS still follows the device preference. No preference data leaves the device.
