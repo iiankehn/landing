@@ -15,7 +15,7 @@
     if (!meta) {
       meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.append(meta);
     }
-    meta.content = theme === 'dark' ? '#141b24' : '#f4f6f9';
+    meta.content = theme === 'dark' ? '#0b1018' : '#f4f6f9';
     document.querySelectorAll('[data-theme-choice]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.themeChoice === preference));
     });
